@@ -6,7 +6,6 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const path = require('path');
 const dns = require('dns');
-require('dotenv').config();
 mongoose.connect(process.env.MONGOLAB_URI);
 // local database - mongodb://localhost:27017/test, { useNewUrlParser: true }
 

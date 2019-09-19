@@ -6,8 +6,8 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const path = require('path');
 const dns = require('dns');
-
-mongoose.connect('mongodb+srv://mryanalbert:JE1otipbTbM9YlKG@cluster0-x2hka.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
+require('dotenv').config();
+mongoose.connect(process.env.MONGOLAB_URI);
 // local database - mongodb://localhost:27017/test, { useNewUrlParser: true }
 
 let Schema = mongoose.Schema;

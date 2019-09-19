@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 const path = require('path');
 const dns = require('dns');
 require('dotenv').config();
-mongoose.connect(process.env.MONGOLAB_URI);
+mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://mryanalbert:JE1otipbTbM9YlKG@cluster0-x2hka.mongodb.net/test?retryWrites=true&w=majority');
 // local database - mongodb://localhost:27017/test, { useNewUrlParser: true }
 
 let Schema = mongoose.Schema;
